@@ -1,0 +1,11 @@
+1. Create directory for save data on master node :
+mkdir /blogdb
+
+Create mysql container :
+Refrence for virable : https://hub.docker.com/_/mysql
+docker run -dit --name mysqlcon -e MYSQL_ROOT_PASSWORD=redhat -e MYSQL_DATABASE=db_name -e MYSQL_USER=db_user -e MYSQL_PASSWORD=db_password -v /blogdb:/var/lib/mysql mysql:latest
+
+
+create wordpress web container :
+Refrence for virable : https://hub.docker.com/_/wordpress
+docker run -dit --name wpcon -e WORDPRESS_DB_HOST=mysqlcon -e WORDPRESS_DB_USER=db_user -e WORDPRESS_DB_PASSWORD=db_password -e WORDPRESS_DB_NAME=db_name --link mysqlcon -p 8080:80 wordpress:latest
