@@ -1,0 +1,24 @@
+Get the url which you want to copy
+for example we have https://github.com/kmahendra999/90DaysOfDevOps.git
+you will get https://github.com/kmahendra999/90DaysOfDevOps.git in code >> local >> https >> copy url for cloning
+
+go to your local computer and install git and run below given command in a folder where you want to put data.
+"git clone https://github.com/kmahendra999/90DaysOfDevOps.git"
+
+
+login to your github and
+create new repo with name "90DaysofDevOps"
+and create a public repo.
+come to your folder and open git bash/cli on your local pc
+
+on browser login with your github with your credintials
+git config --global user.email "asiathemes@gmail.com"
+
+git init
+#git status
+git add .
+#git status
+git commit -m "first commit"
+#git branch -M main ----- for create main branch otherwise master is default
+git remote add origin https://github.com/asiathemes/test.git
+git push origin master
