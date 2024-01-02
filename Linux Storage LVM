@@ -1,0 +1,12 @@
+For change how to change the swap value, when swap will come and hold the process
+
+/etc/sysctl.d/sysctl.conf me vm.swapiness=value
+
+
+
++=============================
+
+LVM concepts
+
+Logical Voleme Manager
+
