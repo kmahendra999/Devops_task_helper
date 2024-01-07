@@ -69,6 +69,22 @@ jab 2 nodes bhi nahi ho masster ke cluster me tab
 docker swarm init --force-net-cluster --advertise-addr 192.168.56.101
 
 
+## Manage replics
+
+
+docker service create --replicas=3 mywebserver
+docker service create --replicas=3 --netword=frontend mywebserver
+docker service create --replicas=3 -p 8080:80 mywebserver
+
+3 replicas on x nodes
+docker service create --replicas=3 mywebserver
+
+1 instance on every node
+docker service create --mode global mywebserver
+
+update no of replics
+docker service create --replicas=3 --name webserver my-web-server
+docker service update --replicas=3 webserver
 
 
 
