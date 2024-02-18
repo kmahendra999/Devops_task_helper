@@ -1,3 +1,4 @@
+<pre>
 install  ELK-Stack
 #elk #installation #configure-elk #elkstack #monitoring
 ============================================================
@@ -135,3 +136,4 @@ Configure Logstash
 Logstash is a highly customizable part of the ELK stack. 
 Once installed, configure its INPUT, FILTERS, and OUTPUT pipelines 
 according to your own individual use case.
+</pre>
